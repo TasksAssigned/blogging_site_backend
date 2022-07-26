@@ -94,18 +94,18 @@ public class PostServiceImpl implements PostService {
             return new ResponseEntity<>("Need to Login to perform this action", HttpStatus.BAD_REQUEST);
         }
 
-        if(existingPost.isPresent() && author.isPresent()){
-            Post post = existingPost.get();
-            post.setTitle(dto.getTitle());
-            post.setBody(dto.getBody());
-            post.setAuthor(author.get());
-            post.setCreatedOn(new Date());
-            post.setModifiedOn(new Date());
-            postRepository.save(post);
-            return new ResponseEntity<>("Updated Successfully", HttpStatus.NO_CONTENT);
-        }else {
+        if(!existingPost.isPresent() || !author.isPresent()){
             return new ResponseEntity<>("There is no such Post or Author", HttpStatus.BAD_REQUEST);
         }
+
+        Post post = existingPost.get();
+        post.setTitle(dto.getTitle());
+        post.setBody(dto.getBody());
+        post.setAuthor(author.get());
+        post.setCreatedOn(new Date());
+        post.setModifiedOn(new Date());
+        postRepository.save(post);
+        return new ResponseEntity<>("Updated Successfully", HttpStatus.NO_CONTENT);
     }
 
     @Override

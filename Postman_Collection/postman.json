@@ -1,0 +1,1794 @@
+{
+  "info": {
+    "_postman_id": "4e2eacec-2887-475f-b672-a96d6d7c839d",
+    "name": "Blog",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Author",
+      "item": [
+        {
+          "name": "Register Author",
+          "id": "501715d0-2fbd-4ee2-858d-cd36a1a7ef49",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "",
+                "password": "",
+                "showPassword": false
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Nimal23\",\n    \"username\": \"nimal1345\",\n    \"email\": \"kamal284@gmail.com\",\n    \"address\": \"Matara\",\n    \"password\": \"Nimal\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/author/register"
+          },
+          "response": [
+            {
+              "id": "f96846d1-27d7-4412-a190-623e6495826b",
+              "name": "Register Author",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Nimal23\",\n    \"username\": \"nimal1345\",\n    \"email\": \"kamal284@gmail.com\",\n    \"address\": \"Matara\",\n    \"password\": \"Nimal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/author/register"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "18"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 09:56:35 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Saved Successfully"
+            }
+          ]
+        },
+        {
+          "name": "Update Author - Sucessful",
+          "id": "63c8a0a4-780b-4d81-a5c7-ac4d36a2dc2f",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "nimal1345",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Perera\",\n    \"username\": \"nimal1345\",\n    \"email\": \"kamal285@gmail.com\",\n    \"address\": \"Matara\",\n    \"password\": \"Nimal\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/blog/author/update?id=52",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "blog",
+                "author",
+                "update"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "52"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3a6e04e0-25c4-41bc-89e5-e66136087e9c",
+              "name": "Update Author - Sucessful",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Perera\",\n    \"username\": \"nimal1345\",\n    \"email\": \"kamal285@gmail.com\",\n    \"address\": \"Matara\",\n    \"password\": \"Nimal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/blog/author/update?id=52",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "author",
+                    "update"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "52"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 10:53:36 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Delete Author",
+          "id": "c082df2c-6ca4-4ff2-b96d-5d2e47ecbf33",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "Nimal123",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/blog/author/delete?id=51",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "blog",
+                "author",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "51"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "719e9a95-38e1-464b-90d6-64d987fa2eaa",
+              "name": "Delete Author",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/blog/author/delete?id=51",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "author",
+                    "delete"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "51"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 10:56:39 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Get All Authors",
+          "id": "d41400ca-5be9-4a81-91d8-82e4b2bfc136",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "nimal1346",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/author/all"
+          },
+          "response": [
+            {
+              "id": "ab5871dd-9c0c-4908-a5e0-59c781637005",
+              "name": "Get All Authors",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/author/all"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "JSESSIONID=204B8B96290B1FACF8D0D47FE98C0867; Path=/; HttpOnly"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 11:01:26 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 49,\n        \"name\": \"Nima\",\n        \"username\": \"nimal\",\n        \"email\": \"nimal@gmail.com\",\n        \"address\": \"Matara\"\n    },\n    {\n        \"id\": 50,\n        \"name\": \"Nima\",\n        \"username\": \"nimal1\",\n        \"email\": \"nimal1@gmail.com\",\n        \"address\": \"Matara\"\n    },\n    {\n        \"id\": 52,\n        \"name\": \"Perera\",\n        \"username\": \"nimal1345\",\n        \"email\": \"kamal285@gmail.com\",\n        \"address\": \"Matara\"\n    },\n    {\n        \"id\": 53,\n        \"name\": \"Nimal23\",\n        \"username\": \"nimal1346\",\n        \"email\": \"kamal284@gmail.com\",\n        \"address\": \"Matara\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Author",
+          "id": "c0824b09-4cb3-446a-933a-f1e5c548fd14",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "nimal1346",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/author/52"
+          },
+          "response": [
+            {
+              "id": "a72929c3-b110-4240-9c3e-40950354f285",
+              "name": "Get Author",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/author/52"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 11:02:14 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 52,\n    \"name\": \"Perera\",\n    \"username\": \"nimal1345\",\n    \"email\": \"kamal285@gmail.com\",\n    \"address\": \"Matara\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Author Login - Successful",
+          "id": "4b570ada-2e35-4e57-8ccc-7e05dcabe546",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"nimal1345\",\n    \"password\":\"Nimal\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/author/login"
+          },
+          "response": [
+            {
+              "id": "40918121-bbe0-4023-ac13-fd4f6bbbf30e",
+              "name": "Author Login - Successful",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"username\": \"nimal1345\",\n    \"password\":\"Nimal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/author/login"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "16"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 10:46:47 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Login Successful"
+            }
+          ]
+        },
+        {
+          "name": "Logout - Successful",
+          "id": "cbe8b8f5-f118-4ffe-8209-13b3ed7d7050",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"Nimal1345\",\n    \"password\":\"Nimal\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/author/logout"
+          },
+          "response": [
+            {
+              "id": "baedb9b1-7ada-418e-a261-7f80933c95c7",
+              "name": "Logout - Successful",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"username\": \"Nimal1345\",\n    \"password\":\"Nimal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/author/logout"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "17"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 10:51:25 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Logout Successful"
+            }
+          ]
+        }
+      ],
+      "id": "f130ba3b-f858-4f75-a12a-61b11cbeec18"
+    },
+    {
+      "name": "Post",
+      "item": [
+        {
+          "name": "Post a post",
+          "id": "9c5107dd-5a12-48fd-bd52-d06ccf501f63",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Sherlock Holmes Blog\",\n    \"body\": \"He is a Investigator, Good one\",\n    \"authorId\": 50,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/post/add"
+          },
+          "response": [
+            {
+              "id": "f2f35454-fc04-4745-a81e-e7ffe76978c5",
+              "name": "Post a post",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Sherlock Holmes Blog\",\n    \"body\": \"He is a Investigator, Good one\",\n    \"authorId\": 50,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/post/add"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "18"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 11:48:20 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Saved Successfully"
+            }
+          ]
+        },
+        {
+          "name": "Post a post - Wrong Author Id",
+          "id": "de111c43-a2d2-4e61-b56b-8be74b32fe97",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Sherlock Holmes Blog\",\n    \"body\": \"He is a Investigator, Good one\",\n    \"authorId\": 25,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/post/add"
+          },
+          "response": [
+            {
+              "id": "b68e674e-83db-4844-9265-ef0ebda967f4",
+              "name": "Post Post - Wrong Author Id",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Sherlock Holmes Blog\",\n    \"body\": \"He is a Investigator, Good one\",\n    \"authorId\": 25,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/post/add"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "22"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Jul 2022 14:33:22 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "Author Id is incorrect"
+            }
+          ]
+        },
+        {
+          "name": "Put a post",
+          "id": "64564c24-9a3d-4374-9cd9-1251dc07821b",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home...\",\n    \"authorId\": 50,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/blog/post/update?id=55",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "blog",
+                "post",
+                "update"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "55"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c294b580-59e8-47fb-80d8-da407360f449",
+              "name": "Put a post",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home...\",\n    \"authorId\": 50,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/blog/post/update?id=55",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "post",
+                    "update"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "55"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 11:55:49 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Delete a post",
+          "id": "5e1f04df-f1b8-450a-b467-58265cd063e8",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home\",\n    \"authorId\": 11,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/blog/post/delete?id=57",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "blog",
+                "post",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "57"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "de7eb5d7-9d98-4d4c-aee5-ea0b61acff72",
+              "name": "Delete a post",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home\",\n    \"authorId\": 11,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/blog/post/delete?id=57",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "post",
+                    "delete"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "57"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 11:57:36 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Get a post",
+          "id": "2c91c0c9-45cc-4146-81f7-60ecae8d5d22",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "nimal1346",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home\",\n    \"authorId\": 11,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/post/55"
+          },
+          "response": [
+            {
+              "id": "ded9f2d0-531c-443e-843d-5fbb370a807e",
+              "name": "Get a post",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home\",\n    \"authorId\": 11,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/post/55"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "JSESSIONID=2C23FBDB1FA1A04D3596BFC8BAE95336; Path=/; HttpOnly"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:04:30 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 55,\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home...\",\n    \"authorId\": 50,\n    \"createdOn\": \"2022-07-26\",\n    \"modifiedOn\": \"2022-07-26\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Posts",
+          "id": "7646369f-1f0c-4df7-99b8-424a1508c6ff",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "nimal1346",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home\",\n    \"authorId\": 11,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/post/all"
+          },
+          "response": [
+            {
+              "id": "844a48e1-1204-488c-aa21-ac0bc4e01d45",
+              "name": "Get All Posts",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Spiderman Blog\",\n    \"body\": \"No way Home\",\n    \"authorId\": 11,\n    \"createdOn\": \"2020-07-06\" ,\n    \"modifiedOn\": \"2022-07-05\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/post/all"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "JSESSIONID=6969FA213733782872B976700CA66909; Path=/; HttpOnly"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:02:21 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 54,\n        \"title\": \"Sherlock Holmes Blog\",\n        \"body\": \"He is a Investigator, Good one\",\n        \"authorId\": 50,\n        \"createdOn\": \"2022-07-26\",\n        \"modifiedOn\": \"2022-07-26\"\n    },\n    {\n        \"id\": 55,\n        \"title\": \"Spiderman Blog\",\n        \"body\": \"No way Home...\",\n        \"authorId\": 50,\n        \"createdOn\": \"2022-07-26\",\n        \"modifiedOn\": \"2022-07-26\"\n    },\n    {\n        \"id\": 56,\n        \"title\": \"Sherlock Holmes Blog\",\n        \"body\": \"He is a Investigator, Good one\",\n        \"authorId\": 50,\n        \"createdOn\": \"2022-07-26\",\n        \"modifiedOn\": \"2022-07-26\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Posts by Author Id",
+          "id": "1fdc2dc3-aec3-40e8-9c62-b5003984c357",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "nimal1346",
+                "password": "Nimal",
+                "showPassword": false
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/author/50/post"
+          },
+          "response": [
+            {
+              "id": "270fc655-06ec-4070-9e95-fceb275b3781",
+              "name": "Get Posts by Author Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/author/50/post"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Set-Cookie",
+                  "value": "JSESSIONID=5D95FD89B8443DA6383C9503F6D7A190; Path=/; HttpOnly"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:07:56 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 54,\n        \"title\": \"Sherlock Holmes Blog\",\n        \"body\": \"He is a Investigator, Good one\",\n        \"authorId\": 50,\n        \"createdOn\": \"2022-07-26\",\n        \"modifiedOn\": \"2022-07-26\"\n    },\n    {\n        \"id\": 56,\n        \"title\": \"Sherlock Holmes Blog\",\n        \"body\": \"He is a Investigator, Good one\",\n        \"authorId\": 50,\n        \"createdOn\": \"2022-07-26\",\n        \"modifiedOn\": \"2022-07-26\"\n    }\n]"
+            }
+          ]
+        }
+      ],
+      "id": "eada95bf-0bca-4b7a-9133-547b886c7e75"
+    },
+    {
+      "name": "Comment",
+      "item": [
+        {
+          "name": "Post a Comment",
+          "id": "22e0d459-9f11-4fd8-9f87-887d41f0810d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"postId\": 55,\n    \"name\": \"Saman's comment\",\n    \"email\": \"saman@gmail.com\",\n    \"body\": \"Really Good Post\",\n    \"createdOn\": \"2022-07-05\",\n    \"modifiedOn\": \"2022-07-06\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8080/blog/comment/add"
+          },
+          "response": [
+            {
+              "id": "3b695ce9-836a-4d0c-85e0-ef6cb6964aed",
+              "name": "Post a Comment",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"postId\": 55,\n    \"name\": \"Saman's comment\",\n    \"email\": \"saman@gmail.com\",\n    \"body\": \"Really Good Post\",\n    \"createdOn\": \"2022-07-05\",\n    \"modifiedOn\": \"2022-07-06\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/blog/comment/add"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "18"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:12:19 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Saved Successfully"
+            }
+          ]
+        },
+        {
+          "name": "Put a Comment",
+          "id": "d676f54e-c410-4b00-99f7-23f75aff177e",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"postId\": 55,\n    \"name\": \"Nimal's comment\",\n    \"email\": \"nimal@gmail.com\",\n    \"body\": \"Bad Post\",\n    \"createdOn\": \"2022-07-05\",\n    \"modifiedOn\": \"2022-07-06\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/blog/comment/update?id=58",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "blog",
+                "comment",
+                "update"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "58"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "069e4ea4-6f61-4197-9ad8-1b9ac7026f5b",
+              "name": "Put a Comment",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"postId\": 55,\n    \"name\": \"Nimal's comment\",\n    \"email\": \"nimal@gmail.com\",\n    \"body\": \"Bad Post\",\n    \"createdOn\": \"2022-07-05\",\n    \"modifiedOn\": \"2022-07-06\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/blog/comment/update?id=58",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "comment",
+                    "update"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "58"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:22:47 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Delete a Comment",
+          "id": "27e98be3-3ac2-4976-8ad4-01850ef068ae",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/blog/comment/delete?id=62",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "blog",
+                "comment",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "62"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7bf88f83-09fc-4892-8a49-e38d92fc4c41",
+              "name": "Delete a Comment",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/blog/comment/delete?id=27",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "comment",
+                    "delete"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "27"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Jul 2022 17:00:53 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "id": "122d7e09-b84b-4e2f-8200-92f52e4a5604",
+              "name": "Delete a Comment",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/blog/comment/delete?id=62",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "blog",
+                    "comment",
+                    "delete"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "62"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:23:29 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Get a Comment",
+          "id": "038c2574-f8b6-461a-a4c3-a38db8fa87d8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/comment/59"
+          },
+          "response": [
+            {
+              "id": "49bde66a-ec36-4a99-869a-7859d7f698e1",
+              "name": "Get a Comment",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/comment/26"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Jul 2022 18:17:02 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 26,\n    \"postId\": 17,\n    \"name\": \"Saman's comment\",\n    \"email\": \"saman@gmail.com\",\n    \"body\": \"Really Good Post\",\n    \"createdOn\": \"2022-07-05\",\n    \"modifiedOn\": \"2022-07-06\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Comments",
+          "id": "97496bb3-705f-4a84-84b9-cb481be9e29b",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/comment/all"
+          },
+          "response": [
+            {
+              "id": "15f755cb-8230-4ee2-99cb-56c108f54115",
+              "name": "Get All Comments",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/comment/all"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Jul 2022 18:17:19 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 21,\n        \"postId\": 12,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 22,\n        \"postId\": 12,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 23,\n        \"postId\": 12,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 24,\n        \"postId\": 13,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 25,\n        \"postId\": 13,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 26,\n        \"postId\": 17,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 28,\n        \"postId\": 12,\n        \"name\": \"Nimal's comment\",\n        \"email\": \"nimal@gmail.com\",\n        \"body\": \"Bad Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 29,\n        \"postId\": 17,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Comments By Post",
+          "id": "12fb9e69-f135-4034-849e-e4c8052df738",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/post/55/comment"
+          },
+          "response": [
+            {
+              "id": "014c1385-cb61-4b74-8570-d76c0e1d2ea0",
+              "name": "Get Comments By Post",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/post/17/comment"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Jul 2022 18:56:36 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 26,\n        \"postId\": 17,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 29,\n        \"postId\": 17,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    }\n]"
+            },
+            {
+              "id": "aac475cb-bf98-4f13-87d1-3567f8d3c0eb",
+              "name": "Get Comments By Post",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/post/55/comment"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:24:48 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 58,\n        \"postId\": 55,\n        \"name\": \"Nimal's comment\",\n        \"email\": \"nimal@gmail.com\",\n        \"body\": \"Bad Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 61,\n        \"postId\": 55,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Comments By Author",
+          "id": "d44983f4-ea53-48ea-b810-a4f164091392",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/blog/author/52/comment"
+          },
+          "response": [
+            {
+              "id": "bdd70d17-d638-4419-8974-c19c2dfc146e",
+              "name": "Get Comments By Author",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/author/11/comment"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Jul 2022 19:10:44 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 24,\n        \"postId\": 13,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 25,\n        \"postId\": 13,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    }\n]"
+            },
+            {
+              "id": "f78b704a-54bc-44b0-a6d9-2de9f270c956",
+              "name": "Get Comments By Author",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8080/blog/author/52/comment"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 Jul 2022 12:25:22 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 58,\n        \"postId\": 55,\n        \"name\": \"Nimal's comment\",\n        \"email\": \"nimal@gmail.com\",\n        \"body\": \"Bad Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    },\n    {\n        \"id\": 61,\n        \"postId\": 55,\n        \"name\": \"Saman's comment\",\n        \"email\": \"saman@gmail.com\",\n        \"body\": \"Really Good Post\",\n        \"createdOn\": \"2022-07-05\",\n        \"modifiedOn\": \"2022-07-06\"\n    }\n]"
+            }
+          ]
+        }
+      ],
+      "id": "7e9a0292-4a0b-4935-ad6a-141e1f1aec30"
+    }
+  ]
+}
