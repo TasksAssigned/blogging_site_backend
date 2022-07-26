@@ -72,6 +72,9 @@ public class PostServiceImpl implements PostService {
         if (!author.isPresent()) {
             return new ResponseEntity<>("Author Id is incorrect", HttpStatus.BAD_REQUEST);
         }
+        if(author.get().isLoggedIn()==false){
+            return new ResponseEntity<>("Need to Login to perform this action", HttpStatus.BAD_REQUEST);
+        }
         Post post = new Post();
         post.setTitle(dto.getTitle());
         post.setBody(dto.getBody());
@@ -86,6 +89,10 @@ public class PostServiceImpl implements PostService {
     public ResponseEntity updatePost(PostDTO dto, Integer id) {
         Optional<Post> existingPost = postRepository.findById(id.longValue());
         Optional<Author> author = authorRepository.findById(dto.getAuthorId().longValue());
+
+        if(author.get().isLoggedIn()==false){
+            return new ResponseEntity<>("Need to Login to perform this action", HttpStatus.BAD_REQUEST);
+        }
 
         if(existingPost.isPresent() && author.isPresent()){
             Post post = existingPost.get();
